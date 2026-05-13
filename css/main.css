@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+ 
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+ *{
+    margin: 0;
+    padding: 0;
+ }
+
+ body{
+    font-family: "Preahvihear", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    background: #11071F;
+ }
+
+a{
+    text-decoration: none;
+    color: #7127BA;
+}
+
+img{
+    max-width: 100%;
+}
+
+.wrapper{
+    background: #1A0B2E;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    padding: 20px 0;
+}
+
+header .logo{
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+ header nav{
+    float: right;
+    width: 50%;
+ }
+
+ header nav ul{
+    list-style: none;
+    display: flex;
+    float: right;
+    gap: 100px;
+    z-index: 2;
+    padding-top: 14px;
+    position: relative;
+ }
+ 
+ header nav ul li{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+ }
+
+ header nav ul li a{
+    color: white;
+ }
+
+ .main{
+    padding: 130px 100px;
+    position: relative;
+    z-index: 1;  
+ }
+ 
+ .main-content{
+    display: flex;
+    gap: 70px;
+ }
+
+ .main-content img{
+    position: relative;
+    z-index: 2;
+ }
+
+ .main-content h2{
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 126%;
+ }
+
+ .main-content h2 span{
+    color: #7127BA;
+ }
+
+ .main-content p{
+    padding-top: 20px;
+ }
+
+ .main-content p span{
+    color: #7127BA;
+ }
+
+ .main-content .up{
+    position: absolute;
+    transform: translateY(-140%);
+ }
+
+ .main-content::before {
+    content: "";
+    position: absolute;
+    width: 350px; 
+    height: 350px;
+    background: radial-gradient(circle, rgba(113, 39, 186, 0.4) 0%, rgba(113, 39, 186, 0) 70%);
+    background: radial-gradient(circle, rgba(100, 43, 255, 0.5) 0%, rgba(43, 90, 255, 0) 70%); 
+    
+    filter: blur(50px);
+    border-radius: 50%;
+    z-index: 0;
+    
+    animation: pulse 4s infinite ease-in-out;
+    
+    left: 10px;
+    top: 80px;
+}
+
+.main-info{
+   margin-bottom: 100px;
+}
+
+.about h1{
+   font-size: 50px;
+   font-weight: lighter ;
+   line-height: 40px;
+}
+
+.about-info{
+   margin-bottom: 50px;
+}
+
+.block h4{
+   margin-bottom: 2%;
+   font-weight: 200;
+   font-size: 25px;
+}
+
+.block-contact{
+   margin-bottom: 40px;
+}
