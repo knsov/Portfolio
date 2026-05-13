@@ -153,3 +153,51 @@ header .logo{
 .block-contact{
    margin-bottom: 40px;
 }
+
+.counter{
+   margin-bottom: 100px;
+   font-size: 20px;
+   display: flex;
+   gap: 30px;
+   border: #7127BA 1px solid;
+   padding: 20px;
+   border-radius: 10px;
+   flex-direction: column;
+   width: 40%;
+   align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+.counter p{
+   font-size: 30px;
+   font-weight: 300;
+}
+
+.counter button{
+   background: #7127BA;
+   font-family:"Preahvihear", sans-serif ;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   border-radius: 10px;
+}
+
+.counter button:hover{
+   background: #260f44;
+   color: #7127BA;
+   border: none;
+   transition: all 0.3s ease;
+}
+.counter button:active{
+   background: #5b2096;
+   color: white;
+   border: none;
+   transition: all 0.3s ease;
+}
+
+.counter div{
+   display: flex;
+   gap: 10px;
+}
