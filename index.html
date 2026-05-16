@@ -10,18 +10,16 @@
     <div class="wrapper">
         <header class="container">
             <span class="logo">Logo</span>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </nav>
+            <div>
+                <button onclick="scrollToSection('home')">Home</button>
+                <button onclick="scrollToSection('about')">About</button>
+                <button onclick="scrollToSection('contact')">Contacts</button>
+            </div>
         </header>
     </div> 
     
     <div class="main container">
-        <div class="main-info">
+        <div class="main-info" id="home">
             <div class="main-content">
                 <img src="/img/image 1.png">
                 <div>
@@ -34,7 +32,7 @@
         </div>
         
         <div class="about">
-            <div class="about-info">
+            <div class="about-info" id="about">
                 <h1>I'm a Software Engineer.|</h1>
                 <p>In the future, I plan to work at Google.</p>
             </div>
@@ -63,21 +61,24 @@
     </div>
 
 
-
-    <footer>
-        <div class="block container">
-            <div class="block-contact">
-                <h4>Contacts</h4>
-                <a href="mailto:aldiarkenesov30@gmail.com">aldiarkenesov30@gmail.com</a>
+    <section id="contact">
+        <footer>
+            <div class="block container">
+                <div class="block-contact">
+                    <h4>Contacts</h4>
+                    <a href="mailto:aldiarkenesov30@gmail.com">aldiarkenesov30@gmail.com</a>
+                </div>
+    
+                <div>
+                    <a href="https://www.instagram.com/aldi.knsv?igsh=dTk0aHIwZzF3ZjZ1&utm_source=qr">
+                        <img src="/img/insta logo.png">
+                    </a>
+                </div>
             </div>
+        </footer>
+    </section>
 
-            <div>
-                <a href="https://www.instagram.com/aldi.knsv?igsh=dTk0aHIwZzF3ZjZ1&utm_source=qr">
-                    <img src="/img/insta logo.png">
-                </a>
-            </div>
-        </div>
-    </footer>
 
+    <script src="/js/auto_scroll.js"></script>
 </body>
 </html>

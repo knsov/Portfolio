@@ -30,3 +30,4 @@ function loadCount(){
     }
     updateCount();
 }
+
