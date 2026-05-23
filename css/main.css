@@ -35,6 +35,9 @@ img{
     background: #1A0B2E;
     width: 100%;
     overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .container{
