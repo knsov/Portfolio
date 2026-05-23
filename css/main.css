@@ -202,3 +202,138 @@ header .logo{
    display: flex;
    gap: 10px;
 }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  gap: 20px;
+  padding: 60px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+/* КАРТОЧКА */
+.card {
+  background-color: transparent; 
+  border-radius: 12px;
+  overflow: hidden; 
+  border: 2px solid #311152;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  border-color: #7127BA;
+  transition: border-color 0.3s ease;
+  scale: 1.02; 
+  transition: all 0.3s ease;
+}
+
+.card-image {
+  position: relative;
+  width: auto;
+  height: 200px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.price-icon {
+  color: #00e676; 
+  font-weight:500;
+  font-size: 25px;
+}
+
+.subtitle {
+  color: #8b949e;
+  font-size: 12px;
+  margin: 5px 0 15px 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #8b949e;
+  margin-bottom: 15px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #21262d;
+  color: #c9d1d9;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto; 
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 6px; 
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-blue {
+  background-color: #7127BA;
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
+
+.btn-outline:hover {
+  background-color: #21262d;
+}
