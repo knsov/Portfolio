@@ -1,4 +1,3 @@
-// Функция для загрузки данных из твоего API
 async function loadCards() {
   const container = document.getElementById('cards-container');
   
@@ -35,7 +34,7 @@ async function loadCards() {
             ${tagsHtml}
           </div>
           <div class="buttons">
-            <button class="btn btn-blue">Get</button>
+            <button class="btn btn-purple">Get</button>
             <button class="btn btn-outline">How to Install</button>
           </div>
         </div>

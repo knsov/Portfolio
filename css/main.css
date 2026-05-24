@@ -9,6 +9,7 @@
  *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
  }
 
  body{
@@ -16,6 +17,7 @@
     font-weight: 300;
     color: #fff;
     background: #11071F;
+    overflow-x: hidden;
  }
  
 html{
@@ -29,6 +31,7 @@ a{
 
 img{
     max-width: 100%;
+    height: auto;
 }
 
 .wrapper{
@@ -38,11 +41,15 @@ img{
     position: sticky;
     top: 0;
     z-index: 100;
+    height: 80px;
+    padding: 10px;
 }
 
 .container{
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 header{
@@ -50,6 +57,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header button{
@@ -75,19 +83,25 @@ header .logo{
 }
 
  .main{
-    padding: 130px 100px;
+    padding: 100px 0;
     position: relative;
     z-index: 1;  
  }
  
  .main-content{
     display: flex;
-    gap: 70px;
+    justify-content: center;
+    gap: 50px;
  }
 
- .main-content img{
-    position: relative;
-    z-index: 2;
+ .main-text{
+    text-align: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+         gap: 20px;
+         max-width: 500px;
  }
 
  .main-content h2{
@@ -101,35 +115,17 @@ header .logo{
  }
 
  .main-content p{
-    padding-top: 20px;
+    font-size: large;
+ }
+
+ .main-content p.up{
+    font-size: 20px;
+    font-weight: 300;
  }
 
  .main-content p span{
     color: #7127BA;
  }
-
- .main-content .up{
-    position: absolute;
-    transform: translateY(-140%);
- }
-
- .main-content::before {
-    content: "";
-    position: absolute;
-    width: 350px; 
-    height: 350px;
-    background: radial-gradient(circle, rgba(113, 39, 186, 0.4) 0%, rgba(113, 39, 186, 0) 70%);
-    background: radial-gradient(circle, rgba(100, 43, 255, 0.5) 0%, rgba(43, 90, 255, 0) 70%); 
-    
-    filter: blur(50px);
-    border-radius: 50%;
-    z-index: 0;
-    
-    animation: pulse 4s infinite ease-in-out;
-    
-    left: 10px;
-    top: 80px;
-}
 
 .main-info{
    margin-bottom: 100px;
@@ -138,7 +134,7 @@ header .logo{
 .about h1{
    font-size: 50px;
    font-weight: lighter ;
-   line-height: 40px;
+   line-height: 120%;
 }
 
 .about-info{
@@ -159,12 +155,13 @@ header .logo{
    margin-bottom: 100px;
    font-size: 20px;
    display: flex;
-   gap: 30px;
+   gap: 20px;
    border: #7127BA 1px solid;
    padding: 20px;
    border-radius: 10px;
    flex-direction: column;
-   width: 40%;
+   width: 100%;
+   max-width: 450px;
    align-items: center;
    margin-left: auto;
    margin-right: auto;
@@ -205,14 +202,15 @@ header .logo{
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 20px;
-  padding: 60px;
+  padding: 20px;
   margin-bottom: 100px;
   margin-top: 50px;
+  max-width: 1200px;         /* Ограничиваем ширину сетки, как у хедера */
+  margin: 50px auto 100px auto
 }
 
-/* КАРТОЧКА */
 .card {
   background-color: transparent; 
   border-radius: 12px;
@@ -225,7 +223,7 @@ header .logo{
 .card:hover {
   border-color: #7127BA;
   transition: border-color 0.3s ease;
-  scale: 1.02; 
+  scale: 1.01; 
   transition: all 0.3s ease;
 }
 
@@ -323,9 +321,14 @@ header .logo{
   border: none;
 }
 
-.btn-blue {
-  background-color: #7127BA;
+.btn-purple {
+   background-color: #7127BA;
   color: white;
+}
+
+.btn-purple:hover {
+  background-color: #371663;
+  transition: all 0.3s ease;
 }
 
 .btn-outline {
@@ -336,4 +339,70 @@ header .logo{
 
 .btn-outline:hover {
   background-color: #21262d;
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .main-content img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center; 
+    }
+    
+    .main-content h2 {
+        font-size: 36px; 
+    }
+
+    .about h1 {
+        font-size: 34px;
+    }
+    
+    .main {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    header button {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+    
+    .main-content h2 {
+        font-size: 28px;
+    }
+
+    .about h1 {
+        font-size: 26px;
+    }
+    
+    .counter div {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .counter button {
+        width: 100%;
+    }
+    
+    .block {
+        flex-direction: column;
+        text-align: center;
+    }
 }
