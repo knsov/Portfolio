@@ -163,8 +163,7 @@ header .logo{
    width: 100%;
    max-width: 450px;
    align-items: center;
-   margin-left: auto;
-   margin-right: auto;
+   margin: auto;
 }
 .counter p{
    font-size: 30px;
@@ -369,6 +368,15 @@ header .logo{
     .main {
         padding: 60px 0;
     }
+
+    .about{
+        padding: 60px 20px;
+    }
+
+    .counter {
+        padding: 20px;
+    }
+    
 }
 
 @media (max-width: 480px) {
